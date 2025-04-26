@@ -23,8 +23,8 @@ export class ControlComponent {
   label = input.required<string>();
 
   private element = inject(ElementRef);
-  onClick() {
-    console.log('Control clicked');
-    console.log(this.element);
-  }
+  // onClick() {
+  //   console.log('Control clicked');
+  //   console.log(this.element);
+  // }
 }
