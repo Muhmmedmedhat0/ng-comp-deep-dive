@@ -17,3 +17,5 @@ export class NewTicketComponent {
     this.form().nativeElement.reset();
   }
 }
+// This component is used to create a new ticket
+// It uses the ControlComponent to create input fields for title and description
