@@ -17,3 +17,4 @@ export class NewTicketComponent {
     this.form().nativeElement.reset();
   }
 }
+
