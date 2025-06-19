@@ -4,11 +4,17 @@
   #form
 >
   <app-control label="Title">
-    <input type="text" name="title" id="title" #titleInput />
+    <input type="text" name="title" id="title" #titleInput #input />
   </app-control>
   <p>
     <app-control label="request">
-      <textarea name="request" id="request" rows="3" #requestInput></textarea>
+      <textarea
+        name="request"
+        id="request"
+        rows="3"
+        #requestInput
+        #input
+      ></textarea>
     </app-control>
   </p>
   <p>
