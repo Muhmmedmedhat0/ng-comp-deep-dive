@@ -30,12 +30,12 @@ export class ControlComponent implements AfterContentInit {
     contentChild<ElementRef<HTMLInputElement | HTMLTextAreaElement>>('input');
 
   ngAfterContentInit() {
-    console.log('ControlComponent ngAfterContentInit');
+    // console.log('ControlComponent ngAfterContentInit');
   }
 
   onClick() {
-    console.log('Control clicked');
-    console.log(this.element.nativeElement);
-    console.log(this.control());
+    // console.log('Control clicked');
+    // console.log(this.element.nativeElement);
+    // console.log(this.control());
   }
 }

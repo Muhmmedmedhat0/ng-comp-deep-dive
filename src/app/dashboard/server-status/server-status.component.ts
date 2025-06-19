@@ -22,7 +22,7 @@ export class ServerStatusComponent implements OnInit {
     // The currentStatus signal will be updated every 5 seconds.
     // The component will automatically re-render when the signal changes.
     effect(() => {
-      console.log(`Current server status: ${this.currentStatus()}`);
+      // console.log(`Current server status: ${this.currentStatus()}`);
     });
   }
   ngOnInit() {

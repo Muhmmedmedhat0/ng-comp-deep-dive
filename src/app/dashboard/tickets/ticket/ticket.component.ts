@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
+import { Ticket } from '../ticket.modal';
 
 @Component({
   selector: 'app-ticket',
   imports: [],
   templateUrl: './ticket.component.html',
-  styleUrl: './ticket.component.css'
+  styleUrl: './ticket.component.css',
 })
 export class TicketComponent {
+  ticket = input.required<Ticket>();
 
+  detailsVisible = signal<boolean>(false);
+
+  onToggleClick() {
+    this.detailsVisible.update((prev) => !prev);
+  }
 }
