@@ -15,4 +15,13 @@ export class TicketsComponent {
   onAddTicket(ticket: Ticket) {
     this.tickets.update((currentTickets) => [...currentTickets, ticket]);
   }
+
+  onCloseTicket(id: number) {
+    // Close the ticket by updating its status to 'closed'
+    this.tickets.update((currentTickets) =>
+      currentTickets.map((ticket) =>
+        ticket.id === id ? { ...ticket, status: 'closed' } : ticket
+      )
+    );
+  }
 }

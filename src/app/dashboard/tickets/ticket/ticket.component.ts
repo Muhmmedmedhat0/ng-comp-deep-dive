@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { Ticket } from '../ticket.modal';
 
 @Component({
@@ -9,10 +9,15 @@ import { Ticket } from '../ticket.modal';
 })
 export class TicketComponent {
   ticket = input.required<Ticket>();
+  close = output<void>();
 
   detailsVisible = signal<boolean>(false);
 
   onToggleClick() {
     this.detailsVisible.update((prev) => !prev);
+  }
+
+  onMarkAsCompleted() {
+    this.close.emit();
   }
 }
